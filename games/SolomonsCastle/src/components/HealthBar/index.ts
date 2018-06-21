@@ -1,0 +1,1 @@
+export { HealthBar as default } from './HealthBar';
