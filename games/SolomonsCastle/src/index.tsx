@@ -1,11 +1,11 @@
 import React from 'react';
 import { render as renderDom } from 'react-dom';
 
-import Health from './components/Health';
+import ResourceBar from './components/ResourceBar';
 import Player from './js/types/Player';
 
 const myPlayer: Player = {
-    health: 75,
+    health: 20,
     hunger: 0
 };
 
@@ -13,7 +13,7 @@ const myPlayer: Player = {
 renderDom(
     <div>
         <h1>hello Solomon</h1>
-        <Health current={myPlayer.health} maximum={100} />
+        <ResourceBar current={myPlayer.health} maximum={100} />
     </div>,
     document.getElementById('root')
 );
