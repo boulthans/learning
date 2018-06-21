@@ -1,19 +1,24 @@
 import React from 'react';
 import { render as renderDom } from 'react-dom';
 
-import ResourceBar from './components/ResourceBar';
+import HealthBar from './components/HealthBar';
+import StaminaBar from './components/StaminaBar';
 import Player from './js/types/Player';
 
 const myPlayer: Player = {
-    health: 20,
-    hunger: 0
+    health: 100,
+    hunger: 0,
+    maximumHealth: 100,
+    maximumStamina: 100,
+    stamina: 100
 };
 
 
 renderDom(
     <div>
         <h1>hello Solomon</h1>
-        <ResourceBar current={myPlayer.health} maximum={100} />
+        <HealthBar current={myPlayer.health} maximum={myPlayer.maximumHealth} />
+        <StaminaBar current={myPlayer.stamina} maximum={myPlayer.maximumStamina} />
     </div>,
     document.getElementById('root')
 );

@@ -1,0 +1,1 @@
+export { StaminaBar as default } from './StaminaBar';

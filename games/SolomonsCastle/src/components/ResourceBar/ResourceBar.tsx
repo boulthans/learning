@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-interface Props {
+export interface ResourceBarProps {
     readonly current: number;
     readonly maximum: number;
 }
 
-export const ResourceBar: React.StatelessComponent<Props> = ({ current, maximum }) =>
+export const ResourceBar: React.StatelessComponent<ResourceBarProps> = ({ current, maximum }) =>
     <progress value={current} max={maximum} />
