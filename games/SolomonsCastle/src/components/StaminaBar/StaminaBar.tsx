@@ -6,5 +6,5 @@ import ResourceBar, { ResourceBarProps } from '../ResourceBar';
 export const StaminaBar: React.StatelessComponent<ResourceBarProps> = ({ current, maximum }) =>
     <div>
         <p>Stamina:</p>
-        <ResourceBar current={current} maximum={maximum} />
+        <ResourceBar barColour="#fcec03" current={current} maximum={maximum} />
     </div>
