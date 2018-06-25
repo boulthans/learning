@@ -5,6 +5,7 @@ import HealthBar from './components/HealthBar';
 import StaminaBar from './components/StaminaBar';
 import Player from './js/types/Player';
 
+
 const myPlayer: Player = {
     health: 100,
     hunger: 0,
@@ -13,12 +14,19 @@ const myPlayer: Player = {
     stamina: 100
 };
 
-
 renderDom(
-    <div>
+    <div style={{
+        boxSizing: 'border-box'
+    }}>
         <h1>hello Solomon</h1>
-        <HealthBar current={myPlayer.health} maximum={myPlayer.maximumHealth} />
-        <StaminaBar current={myPlayer.stamina} maximum={myPlayer.maximumStamina} />
+
+        <div className="padded--tight background-color--grey--3"
+             style={{
+            width: '30%'
+        }}>
+            <HealthBar className="spaced-bottom--tight" current={myPlayer.health} maximum={myPlayer.maximumHealth} />
+            <StaminaBar current={myPlayer.stamina} maximum={myPlayer.maximumStamina} />
+        </div>
     </div>,
     document.getElementById('root')
 );
