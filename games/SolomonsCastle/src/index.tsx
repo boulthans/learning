@@ -15,10 +15,18 @@ const myPlayer: Player = {
 };
 
 renderDom(
-    <div>
+    <div style={{
+        boxSizing: 'border-box'
+    }}>
         <h1>hello Solomon</h1>
-        <HealthBar current={myPlayer.health} maximum={myPlayer.maximumHealth} />
-        <StaminaBar current={myPlayer.stamina} maximum={myPlayer.maximumStamina} />
+
+        <div className="padded--tight background-color--grey--3"
+             style={{
+            width: '30%'
+        }}>
+            <HealthBar current={myPlayer.health} maximum={myPlayer.maximumHealth} />
+            <StaminaBar current={myPlayer.stamina} maximum={myPlayer.maximumStamina} />
+        </div>
     </div>,
     document.getElementById('root')
 );

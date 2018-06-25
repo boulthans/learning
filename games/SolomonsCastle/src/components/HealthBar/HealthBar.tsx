@@ -10,6 +10,6 @@ export interface HealthBarProps {
 
 export const HealthBar: React.StatelessComponent<HealthBarProps> = ({ current, maximum }) =>
     <div>
-        <p>Health:</p>
+        <p className="spaced-bottom--none">Health:</p>
         <ResourceBar barColour="#d70000" current={current} maximum={maximum} />
     </div>

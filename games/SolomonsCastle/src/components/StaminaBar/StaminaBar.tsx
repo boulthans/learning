@@ -10,6 +10,6 @@ export interface StaminaBarProps {
 
 export const StaminaBar: React.StatelessComponent<StaminaBarProps> = ({ current, maximum }) =>
     <div>
-        <p>Stamina:</p>
+        <p className="spaced-bottom--none">Stamina:</p>
         <ResourceBar barColour="#fcec03" current={current} maximum={maximum} />
     </div>

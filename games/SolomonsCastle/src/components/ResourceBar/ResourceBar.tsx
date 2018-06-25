@@ -8,11 +8,13 @@ export interface ResourceBarProps {
 }
 
 export const ResourceBar: React.StatelessComponent<ResourceBarProps> = ({ barColour, current, maximum }) =>
-    <div style={{
+    <div className="rounded"
+         style={{
         backgroundColor: 'lightgrey',
         display: 'flex'
     }}>
-        <div style={{
+        <div className="rounded"
+             style={{
             backgroundColor: barColour,
             flexBasis: `${(current / maximum) * 100}%`,
             height: '14px'
