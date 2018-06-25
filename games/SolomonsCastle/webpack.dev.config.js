@@ -1,5 +1,6 @@
 'use strict';
 
+const CopyWebpackPlugin = require('copy-webpack-plug');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -32,6 +33,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            { from: 'node_modules/honeycomb-web-toolkit/dist/honeycomb.css', to: 'assets/honeycomb.css' }
+        ]),
         new HtmlWebpackPlugin({
             template: './dev/index.html'
         })
