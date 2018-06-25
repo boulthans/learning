@@ -10,11 +10,7 @@ interface PlayerStatsProps {
 }
 
 export const PlayerStats: React.StatelessComponent<PlayerStatsProps> = ({ currentHealth, currentStamina }) =>
-    <div className="padded--tight background-color--grey--3"
-                style={{
-                width: '30%'
-            }}>
-            
+    <div className="padded--tight background-color--grey--3">
         <HealthBar className="spaced-bottom--tight" current={currentHealth} maximum={100} />
         <StaminaBar current={currentStamina} maximum={100} />
     </div>

@@ -15,9 +15,36 @@ const myPlayer: Player = {
 
 renderDom(
     <div style={{
-        boxSizing: 'border-box'
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '0 auto',
+        width: '960px'
     }}>
-        <PlayerStats currentHealth={myPlayer.health} currentStamina={myPlayer.stamina} />
+
+        <div className="background-color--blue"
+             style={{
+                 minHeight: '500px'
+             }}>adventure text window</div>
+
+        <div style={{
+            display: 'flex'
+        }}>
+            <div style={{
+                flexBasis: '30%'
+            }}>
+                <PlayerStats currentHealth={myPlayer.health} currentStamina={myPlayer.stamina} />
+            </div>
+            <div className="background-color--green"
+                 style={{
+                     flex: 1
+                 }}>
+                
+            </div>
+        </div>
+        <div className="background-color--blue"
+             style={{
+                 minHeight: '100px'
+             }}>item bar</div>
     </div>,
     document.getElementById('root')
 );
