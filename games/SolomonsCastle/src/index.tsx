@@ -24,7 +24,7 @@ renderDom(
              style={{
             width: '30%'
         }}>
-            <HealthBar current={myPlayer.health} maximum={myPlayer.maximumHealth} />
+            <HealthBar className="spaced-bottom--tight" current={myPlayer.health} maximum={myPlayer.maximumHealth} />
             <StaminaBar current={myPlayer.stamina} maximum={myPlayer.maximumStamina} />
         </div>
     </div>,
