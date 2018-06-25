@@ -3,7 +3,12 @@ import React from 'react';
 import ResourceBar, { ResourceBarProps } from '../ResourceBar';
 
 
-export const HealthBar: React.StatelessComponent<ResourceBarProps> = ({ current, maximum }) =>
+export interface HealthBarProps {
+    readonly current: number;
+    readonly maximum: number;
+}
+
+export const HealthBar: React.StatelessComponent<HealthBarProps> = ({ current, maximum }) =>
     <div>
         <p>Health:</p>
         <ResourceBar barColour="#d70000" current={current} maximum={maximum} />
