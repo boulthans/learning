@@ -1,1 +1,1 @@
-export { ResourceBar as default } from './ResourceBar';
+export { ResourceBar as default, ResourceBarProps } from './ResourceBar';

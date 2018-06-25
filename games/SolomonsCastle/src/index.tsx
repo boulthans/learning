@@ -5,6 +5,7 @@ import HealthBar from './components/HealthBar';
 import StaminaBar from './components/StaminaBar';
 import Player from './js/types/Player';
 
+
 const myPlayer: Player = {
     health: 100,
     hunger: 0,
@@ -12,7 +13,6 @@ const myPlayer: Player = {
     maximumStamina: 100,
     stamina: 100
 };
-
 
 renderDom(
     <div>
